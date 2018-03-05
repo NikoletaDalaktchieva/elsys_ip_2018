@@ -1,7 +1,19 @@
 package org.elsys.ip.rest.model;
 
-public class Test {
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "test")
+public class Test implements Serializable{
+  @Id
+  @Column(name = "id")
   private int id;
+  @Column(name = "name")
   private String name;
 
   public Test(int id, String name) {

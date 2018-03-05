@@ -29,6 +29,7 @@ public class TestResource {
   @GET
   @Produces("application/json")
   public List<Test> getTestList() {
+    testService.addTest();
     List<Test> testList = testService.getTestList();
     return testList;
   }

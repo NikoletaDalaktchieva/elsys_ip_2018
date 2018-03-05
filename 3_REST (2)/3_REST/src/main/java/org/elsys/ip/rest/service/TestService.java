@@ -2,12 +2,13 @@ package org.elsys.ip.rest.service;
 
 import org.elsys.ip.rest.model.Test;
 import org.elsys.ip.rest.repository.TestRepository;
+import org.elsys.ip.rest.repository.TestRepositoryJDBC;
 
 import java.util.List;
 
 public class TestService {
 
-  private TestRepository testRepository = new TestRepository();
+  private TestRepositoryJDBC testRepository = new TestRepositoryJDBC();
 
   public List<Test> getTestList() {
     return testRepository.getTestList();
@@ -28,4 +29,6 @@ public class TestService {
   public void deleteTest(Integer id) {
     testRepository.deleteTest(id);
   }
+
+  public void addTest(){ testRepository.addTest(); }
 }

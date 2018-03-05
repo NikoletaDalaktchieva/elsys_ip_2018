@@ -9,12 +9,12 @@ import java.util.Optional;
 
 public class TestRepository {
   private static List<Test> testList = new ArrayList<>(
-    Arrays.asList(
-      new Test(1, "name1"),
-      new Test(2, "name2"),
-      new Test(3, "name3"),
-      new Test(4, "name4")
-    ));
+          Arrays.asList(
+                  new Test(1, "name1"),
+                  new Test(2, "name2"),
+                  new Test(3, "name3"),
+                  new Test(4, "name4")
+          ));
 
   public List<Test> getTestList() {
     return testList;
